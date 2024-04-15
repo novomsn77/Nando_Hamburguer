@@ -207,17 +207,17 @@ function checkRestaurantOpen(){
 
     const data = new Date ();
     const hora = data.getHours();
-    return hora >= 10 && hora < 22;
+    return hora >= 11 && hora < 22;
 }
 
 
-const spanItem = document.getElementById("data-span")
+const spanItem = document.getElementById("data-span");
 const isOpen = checkRestaurantOpen();
 
 if(isOpen){
-    spanItem.classList.remove("bg-red-500")
-    spanItem.classList.add("bg-green-600")
+    spanItem.classList.add("bg-green-500");
+    spanItem.classList.remove("bg-red-700");
 }else{
-    spanItem.classList.remove("bg-green-600")
-    spanItem.classList.add("bg-red-500")
+    spanItem.classList.add("bg-red-700");
+    spanItem.classList.remove("bg-green-500");
 }
